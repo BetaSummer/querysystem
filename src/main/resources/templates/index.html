@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+	<title>新生信息查询2</title>
+	<style type="text/css">
+		body{
+	background-image: url(/img/before.jpg);
+	background-repeat: no-repeat;
+	font-size: 100%;
+	background-size: cover;
+	overflow: hidden;
+}
+.welcom{
+	margin:50px 33.3% 0 33.3%;
+	width: 33.4%;
+	/*height: 70px;*/
+	padding-top: 10%;
+	float: left;
+	z-index: 999;
+	position:absolute;
+	text-align: center;
+}
+.welcom img{
+	width: 100%;
+	height: 100%;
+}
+.login-region{
+	margin: 0 auto;
+	width: 33.4%;
+	height: 200px;
+	overflow: hidden;
+	/*display: none;*/
+	opacity: 0;
+	/*background-color: blue;*/
+}
+.login-region h1{
+	font-size: 2.5em;
+    color: #fff;
+    font-weight: 800;
+    font-family: "华文行楷";
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1.5em;
+    padding-top: 150px;
+}
+/*.login-region,h1{
+	margin-top: 80px;
+}*/
+.login{
+    width: 95%;
+    /*height: 30%;*/
+    display: block;
+    margin: 0 auto;
+    /*background-color: red;*/
+}
+.login-user{
+	background: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+    padding: 8px;
+}
+.login-user i{
+	background: url(***)no-repeat 6px 6px;
+    width: 38px;
+    height: 38px;
+    float: left;
+    display: inline-block;
+}
+.login-user input[type="text"]{
+	float: left;
+    background: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
+    padding: 10px 16px;
+    border: none;
+    border-left: 1px solid #fff;
+    width: 82%;
+    display: inline-block;
+    margin-left: 7px;
+}
+.clear{clear: both;}
+.login-click{
+	text-align: center;
+}
+.login-click input[type="submit"]{
+	font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    padding: 13px 0;
+    background: #ff3366;
+    display: inline-block;
+    width: 100%;
+    outline: none;
+    border: 2px solid #ff3366;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+
+
+@media (max-width:1430px){
+.login-region {
+    width: 40%;
+}
+body {
+    min-height: 750px;
+}
+}
+@media (max-width:1300px){
+.login-region {
+    width: 47%;
+}
+body {
+    min-height: 750px;
+}
+.login-user input[type="text"] {
+    width: 47%;
+}
+}
+@media (max-width:768px){
+body {
+    min-height: 929px;
+}
+.login-region {
+    width: 66%;
+}
+.login-user input[type="text"] {
+    width: 66%;
+}
+body {
+    min-height: 750px;
+}
+}
+@media (max-width:562px){
+.login-region {
+    width: 74%;
+}
+body {
+    min-height: 700px;
+}
+.login-user input[type="text"] {
+    width: 72%;
+}
+.welcom{
+	padding-top: 1%;
+}
+.login-region h1 {
+    margin-bottom: 1.5em;
+    font-size: 2.0em;
+}
+}
+@media (max-width:450px){
+.login {
+    width: 90%;
+}
+.login-user input[type="text"] {
+    width: 50%;
+    padding: 12px 16px;
+}
+.login-region h1 {
+    margin-bottom: 1.5em;
+    font-size: 2.0em;
+    padding-top: 90px;
+}
+.welcom {
+    padding-top: 30%;
+    height: 40px;
+    margin:50px 16.5% 0 16.5%;
+    width: 66.6%;
+}
+.login-region {
+    padding: 30px 0px 45px 0px;
+    width: 100%;
+}
+.login-user {
+    margin-bottom: 1em;
+    padding: 3px;
+    width: 98%;
+}
+.login-click input[type="submit"] {
+    padding: 10px 0;
+}
+body {
+    min-height: 730px;
+}
+}
+@media (max-width:375px){
+body {
+    min-height: 630px;
+}
+}
+@media (max-width:320px){
+body {
+    min-height: 568px;
+}
+.login-region h1{
+	padding-top: 0px;
+}
+}
+
+	</style>
+</head>
+<body>
+    <div class="welcom" id="welcom"><img src="/img/logo2.png"/></div>
+    
+	<div class="login-region" id="region">
+		<h1>新生信息查询系统</h1>
+		<div class="login">
+			<form action="/query" method="post">
+				<div class="login-user">
+				  <i></i><input type="text" name="IdNum" placeholder="准考证号"/>
+                  <div class="clear"></div>
+				</div>
+				<div class="login-user">
+				  <i></i><input type="text" name="ExamNum" placeholder="身份证号"/>
+                  <div class="clear"></div>
+				</div>
+				<div class="login-click"><input type="submit" value="查询"/>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
+
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+// $("#welcom").bind("click",function (event) {
+//         $("#welcom").hide();
+//     });
+$("#welcom").click(function(){
+	  var welcom=$("#welcom");
+	  welcom.animate({top:'500px',fontSize:'1em;',paddingTop:'0'},1000);
+});
+$("#welcom").click(function(){
+	  var region=$("#region");
+	  region.animate({height:'500px',opacity:'1'},3000);
+});
+
+// 	$("body").click(function(){
+// 	  var region=$("#region");
+// 	  region.animate({height:'500px',opacity:'1'},2000);
+// });
+
+</script>
