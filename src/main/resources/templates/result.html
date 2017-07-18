@@ -1,266 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
     <title>新生信息界面</title>
-    <style type="text/css">
-        body{
-    background-image: url(/img/after.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-}
-.welcom{
-    margin:50px 33.3% 0 33.3%;
-    width: 33.4%;
-    padding-top: 13%;
-    float: left;
-    z-index: 999;
-    position:absolute;
-    text-align: center;
-}
-.login-region{
-    margin: 0 auto;
-    width: 33.4%;
-    overflow: hidden;
-    /*opacity: 0;*/
-}
-.login-region h1,.user-region h1{
-    font-size: 2em;
-    color: #fff;
-    font-family: "华文行楷";
-    font-weight: 800;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 1em;
-    padding-top: 150px;
-}
-.login-region,.user-region h2{
-    font-size: 1em;
-    color: #fff;
-    padding-left: 3%;
-    text-transform: uppercase;  
-    margin-bottom: 1em;
-}
-.login{
-    width: 95%;
-    display: block;
-    margin: 0 auto;
-    /*background-color: red;*/
-}
-.login-user{
-    background: rgba(255, 255, 255, 0.7);
-    margin-bottom: 20px;
-    padding: 8px;
-}
-.login-user i{
-    background: url(***)no-repeat 6px 6px;
-    width: 38px;
-    height: 38px;
-    float: left;
-    display: inline-block;
-}
-.login-user input[type="text"]{
-    float: left;
-    background: none;
-    outline: none;
-    font-size: 15px;
-    font-weight: 400;
-    color: #000;
-    padding: 10px 16px;
-    border: none;
-    border-left: 1px solid #fff;
-    width: 82%;
-    display: inline-block;
-    margin-left: 7px;
-}
-.clear{clear: both;}
-.login-click{
-    text-align: center;
-}
-.login-click input[type="submit"]{
-    font-size: 15px;
-    font-weight: 700;
-    color: #fff;
-    padding: 13px 0;
-    background: #ff3366;
-    display: inline-block;
-    width: 50%;
-    outline: none;
-    border: 2px solid #ff3366;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-.user-region{
-    margin: 0 auto;
-    width: 66.6%;
-    height: 700px;
-    overflow: hidden;
-    /*opacity: 0;*/
-}
-.information{
-    width: 48%;
-    float: left;
-    overflow: hidden;
-}
-#infor{margin-right: 4%; }
-
-
-@media (max-width:1430px){
-.login-region {
-    width: 40%;
-}
-body {
-    min-height: 750px;
-}
-}
-@media (max-width:1300px){
-.login-region {
-    width: 47%;
-}
-body {
-    min-height: 750px;
-}
-.login-user input[type="text"] {
-    width: 47%;
-}
-}
-@media (max-width:770px){
-body {
-    min-height: 929px;
-}
-.login-region {
-    width: 66%;
-}
-.login-user input[type="text"] {
-    width: 66%;
-}
-.information{
-    width: 100%
-}
-.user-region h1{padding-top: 50px;
-}
-#infor{margin-right: 0; }
-.login-click input[type="submit"]{width: 100%;}
-}
-@media (max-width:562px){
-.login-region {
-    width: 74%;
-}
-body {
-    min-height: 700px;
-}
-.login-user input[type="text"] {
-    width: 72%;
-}
-.welcom{
-    padding-top: 1%;
-}
-.login-region h1 {
-    margin-bottom: 1.5em;
-    font-size: 2.0em;
-}
-}
-@media (max-width:450px){
-.login {
-    width: 90%;
-}
-.login-user input[type="text"] {
-    width: 50%;
-}
-.login-region h1 {
-    margin-bottom: 1.5em;
-    font-size: 2em;
-}
-.welcom {
-    padding-top: 30%;
-    height: 40px;
-    margin:50px 16.5% 0 16.5%;
-    width: 66.6%;
-}
-.login-region {
-    padding: 30px 0px 45px 0px;
-    width: 90%;
-}
-.login-user {
-    margin-bottom: 1em;
-    padding: 3px;
-}
-.user-region {width: 95%;}
-.user-region h1 {
-    margin-bottom: 1.5em;
-    font-size: 1.7em;
-}
-.login-user input[type="submit"] {
-    padding: 10px 0;
-}
-body {
-    min-height: 730px;
-}
-}
-@media (max-width:375px){
-body {
-    min-height: 630px;
-}
-.login-user h1 {
-    margin-bottom: 1.5em;
-    font-size: 1.5em;
-}
-}
-@media (max-width:320px){
-body {
-    min-height: 568px;
-}
-.login-region h1{padding-top:50px; }
-}
-
-
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 </head>
 <body>
-    <!-- <div class="welcom" id="welcom"><h1>WELCOM TO HDU</h1></div> -->
-    <div class="user-region" id="user">
-        <h1>新生信息查询系统</h1><h2>你好：<span th:text="${student.Name}"/>,以下是你的信息：</h2>
-        <div class="login">
-            <form>
-             <div class="information"  id="infor">
+<!-- <div class="welcom" id="welcom"><h1>WELCOM TO HDU</h1></div> -->
+<div class="user-region" id="user">
+    <h1 id="hhh">新生信息查询系统</h1><h2>你好：xx,以下是你的信息：</h2>
+    <div class="login">
+        <form>
+            <div class="information"  id="infor">
                 <div class="login-user">
-                  <i></i><input type="text" name="" placeholder="专业" disabled="disabled" />
-                  <div class="clear"></div>
+                    <a>专业</a><input type="text" name="" value="填入专业" disabled="disabled" />
+                    <div class="clear"></div>
                 </div>
                 <div class="login-user">
-                  <i></i><input type="text" name="" placeholder="班级号" disabled="disabled"/>
-                  <div class="clear"></div>
+                    <a>班级号</a><input type="text" name="" value="填入班级号" disabled="disabled"/>
+                    <div class="clear"></div>
                 </div>
                 <div class="login-user">
-                  <i></i><input type="text" name="" placeholder="学号" disabled="disabled"/>
-                  <div class="clear"></div>
-                </div>
-             </div>
-             <div class="information">
-                <div class="login-user">
-                  <i></i><input type="text" name="" placeholder="寝室号" disabled="disabled"/>
-                  <div class="clear"></div>
+                    <a>学号</a><input type="text" name="" value="填入学号" disabled="disabled"/>
+                    <div class="clear"></div>
                 </div>
                 <div class="login-user">
-                  <i></i><input type="text" name="" placeholder="床号" disabled="disabled"/>
-                  <div class="clear"></div>
+                    <a>XX</a><input type="text" name="" placeholder="填入XX" disabled="disabled"/>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="information">
+                <div class="login-user">
+                    <a>寝室号</a><input type="text" name="" value="填入寝室号" disabled="disabled"/>
+                    <div class="clear"></div>
                 </div>
                 <div class="login-user">
-                  <i></i><input type="text" name="" placeholder="电话" disabled="disabled"/>
-                  <div class="clear"></div>
+                    <a>床位</a><input type="text" name="" value="填入床号" disabled="disabled"/>
+                    <div class="clear"></div>
                 </div>
-             </div>
-                <div class="login-click"><input type="submit" name="" value="我知道了"/></div>
-            </form>
-        </div>
+                <div class="login-user">
+                    <a>电话</a><input type="text" name="" value="填入电话" disabled="disabled"/>
+                    <div class="clear"></div>
+                </div>
+                <div class="login-user">
+                    <a>XX</a><input type="text" name="" placeholder="XX" disabled="disabled"/>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="login-click"><input type="submit" name="" value="我知道了" id="know"/></div>
+        </form>
     </div>
+</div>
 </body>
 </html>
 
 <script type="text/javascript" src="/js/jquery.js"></script>
-<script type="text/javascript">
-    
-</script>
