@@ -12,9 +12,13 @@ body{
     height: 0px;
     padding-top: 13%;
     float: left;
-    z-index: 999;
+    z-index: 998;
     position:absolute;
     text-align: center;
+}
+.welcom img{
+    width:100%;
+    height:  auto ;
 }
 .shade{
     float: left;
@@ -30,12 +34,11 @@ body{
     position:absolute;
     width: 33.4%;
     margin-left: 33.3%;
-    height: 500px;
+    z-index: 999;
     margin-top: -500px;
     overflow: hidden;
     /*display: none;*/
     opacity: 0;
-    z-index: 9;
     /*background-color: blue;*/
 }
 .welcom h1{
@@ -56,7 +59,7 @@ body{
     text-align: center;
     margin-bottom: 2em;}
 .login-region h1,.user-region h1{
-    font-size: 2em;
+    font-size: 3em;
     color: #fff;
     font-family: "华文行楷";
     font-weight: 800;
@@ -92,11 +95,18 @@ body{
     padding: 8px;
 }
 .login-user i{
-    background: url(/img/logo.jpg)no-repeat 6px 6px;
+    background: url(/img/user.png)no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.7;
     width: 38px;
     height: 38px;
     float: left;
     display: inline-block;
+}
+.login-user i.pass {
+    background: url(/img/lock.png)no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.7;
 }
 .login-user a{
     text-align: center;
@@ -153,7 +163,39 @@ body{
     overflow: auto;
 }
 #infor{margin-right: 4%; }
-
+.tips{
+    width: 17%;
+    padding: 10px;
+    float: left;
+    border: 3px double #ff3366;
+    word-wrap: break-word;
+    margin: 50px 5%;
+    color: #ffffff;
+    font-family: 华文楷体;
+    font-weight: 900;
+}
+.tips p{font-size: 20px;}
+.tips a{font-size: 30px;}
+#samename{
+    margin-left: 12%;
+    transform:rotate(9deg);
+    -ms-transform:rotate(-8deg); /* Internet Explorer */
+    -moz-transform:rotate(-8deg); /* Firefox */
+    -webkit-transform:rotate(-8deg); /* Safari 和 Chrome */
+    -o-transform:rotate(-8deg); /* Opera */
+}
+#samearea{
+    transform:rotate(5deg);
+    -ms-transform:rotate(10deg); /* Internet Explorer */
+    -moz-transform:rotate(5deg); /* Firefox */
+    -webkit-transform:rotate(5deg); /* Safari 和 Chrome */
+    -o-transform:rotate(5deg); /* Opera */
+}
+#samebirth{
+    -ms-transform:rotate(10deg); /* Internet Explorer */
+    -moz-transform:rotate(10deg); /* Firefox */
+    -webkit-transform:rotate(10deg); /* Safari 和 Chrome */
+    -o-transform:rotate(10deg); /* Opera */}
 
 @media (max-width:1430px){
     .login-region {
@@ -178,15 +220,20 @@ body{
     body {
         min-height: 750px;
     }
+    welcom{margin-top: 300px}
     .login-user input[type="text"] {
         width: 47%;
     }
+    .tips{padding: 5px;width: 20%;margin: 50px 4%}
+    #samename{margin-left: 6%}
+    #samebirth p,#samearea p,#samename p{font-size: 20px;margin: 5%}
 }
 @media (max-width:845px){
     .user-region {width: 70%;}
     .user-region h1 {
         padding-top: 20px;
     }
+    welcom{margin-top: 300px}
 }
 @media (max-width:768px){
     body {
@@ -212,6 +259,10 @@ body{
     }
     #infor{margin-right: 0; }
     .login-click input[type="submit"]{width: 100%;}
+    .tips{padding: 0;margin: 50px 1%;width: 28%}
+    #samename{margin-left: 1%}
+    #samebirth p,#samearea p,#samename p{font-size: 15px}
+    #samebirth a,#samearea a,#samename a{font-size: 25px}
 }
 
 @media (max-width:562px){
@@ -283,6 +334,10 @@ body{
     body {
         min-height: 730px;
     }
+    .tips{padding: 0;width: 28%}
+    #samename{margin-left: 0}
+    #samebirth p,#samearea p,#samename p{font-size: 15px}
+    #samebirth a,#samearea a,#samename a{font-size: 25px}
 }
 @media (max-width:375px){
     body {
