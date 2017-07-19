@@ -12,6 +12,7 @@ $("#welcom").click(function(){
     hh.animate({fontSize:'0.5em',opacity:'0'},500);
     hh.animate({fontSize:'0.3em',opacity:'0'},100);
     hh.animate({opacity:'1'},700);
+    welcom.css("z-index",1);
 
 });
 $("#welcom").click(function(){

@@ -1,4 +1,4 @@
-package betahouse.controller.base;
+package betahouse.core.Base;
 
 import com.alibaba.fastjson.JSON;
 
@@ -22,7 +22,7 @@ public class BaseController {
 
     protected static String ajaxReturn(HttpServletResponse response, Object data, String message, int status) {
         Map<String, Object> jsonData = new HashMap();
-        jsonData.put("data", data);
+        jsonData.put("Data", data);
         jsonData.put("message", message);
         jsonData.put("status", status);
         render(response, JSON.toJSONString(jsonData));

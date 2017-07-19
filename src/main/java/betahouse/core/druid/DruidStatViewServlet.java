@@ -1,4 +1,4 @@
-package betahouse.druid;
+package betahouse.core.druid;
 
 import com.alibaba.druid.support.http.StatViewServlet;
 

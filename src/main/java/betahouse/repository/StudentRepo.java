@@ -16,5 +16,7 @@ public interface StudentRepo extends JpaRepository<Student, Integer>{
     @Query("select s from Student s where s.examNum = :ExamNum")
     Student findByExamNum(@Param("ExamNum") String ExamNum);
 
-//    ArrayList<Student> findAllByName(Student Name);
+    @Query("select count (s) from Student s where s.Name = :Name")
+    Integer countByName(@Param("Name") String Name);
+
 }

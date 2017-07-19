@@ -13,27 +13,35 @@ public class Student {
     @GeneratedValue
     private Integer Id;
 
-    private String idNum;
-
-    private String examNum;
+    private String classId;
 
     private String stuId;
 
+    private String examNum;
+
     private String Name;
+
+    private String Sex;
 
     private String Major;
 
-    private String classId;
+    private String Political;
 
-    private String dormitoryId;
+    private String birthDate;
 
-    private Integer bedId;
+    private String idNum;
+
+    private String Adress;
+
+    private String postCode;
 
     private String phoneNum;
 
-    public Student(){
+    private String expressNum;
 
-    }
+    private String dormitoryId;
+
+    private String bedId;
 
     public Integer getId() {
         return Id;
@@ -41,46 +49,6 @@ public class Student {
 
     public void setId(Integer id) {
         Id = id;
-    }
-
-    public String getIdNum() {
-        return idNum;
-    }
-
-    public void setIdNum(String idNum) {
-        this.idNum = idNum;
-    }
-
-    public String getExamNum() {
-        return examNum;
-    }
-
-    public void setExamNum(String examNum) {
-        this.examNum = examNum;
-    }
-
-    public String getStuId() {
-        return stuId;
-    }
-
-    public void setStuId(String stuId) {
-        this.stuId = stuId;
-    }
-
-    public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-        Name = name;
-    }
-
-    public String getMajor() {
-        return Major;
-    }
-
-    public void setMajor(String major) {
-        Major = major;
     }
 
     public String getClassId() {
@@ -91,20 +59,84 @@ public class Student {
         this.classId = classId;
     }
 
-    public String getDormitoryId() {
-        return dormitoryId;
+    public String getStuId() {
+        return stuId;
     }
 
-    public void setDormitoryId(String dormitoryId) {
-        this.dormitoryId = dormitoryId;
+    public void setStuId(String stuId) {
+        this.stuId = stuId;
     }
 
-    public Integer getBedId() {
-        return bedId;
+    public String getExamNum() {
+        return examNum;
     }
 
-    public void setBedId(Integer bedId) {
-        this.bedId = bedId;
+    public void setExamNum(String examNum) {
+        this.examNum = examNum;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public String getSex() {
+        return Sex;
+    }
+
+    public void setSex(String sex) {
+        Sex = sex;
+    }
+
+    public String getMajor() {
+        return Major;
+    }
+
+    public void setMajor(String major) {
+        Major = major;
+    }
+
+    public String getPolitical() {
+        return Political;
+    }
+
+    public void setPolitical(String political) {
+        Political = political;
+    }
+
+    public String getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(String birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public String getIdNum() {
+        return idNum;
+    }
+
+    public void setIdNum(String idNum) {
+        this.idNum = idNum;
+    }
+
+    public String getAdress() {
+        return Adress;
+    }
+
+    public void setAdress(String adress) {
+        Adress = adress;
+    }
+
+    public String getPostCode() {
+        return postCode;
+    }
+
+    public void setPostCode(String postCode) {
+        this.postCode = postCode;
     }
 
     public String getPhoneNum() {
@@ -113,5 +145,29 @@ public class Student {
 
     public void setPhoneNum(String phoneNum) {
         this.phoneNum = phoneNum;
+    }
+
+    public String getExpressNum() {
+        return expressNum;
+    }
+
+    public void setExpressNum(String expressNum) {
+        this.expressNum = expressNum;
+    }
+
+    public String getDormitoryId() {
+        return dormitoryId;
+    }
+
+    public void setDormitoryId(String dormitoryId) {
+        this.dormitoryId = dormitoryId;
+    }
+
+    public String getBedId() {
+        return bedId;
+    }
+
+    public void setBedId(String bedId) {
+        this.bedId = bedId;
     }
 }
