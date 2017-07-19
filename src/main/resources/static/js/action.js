@@ -1,27 +1,24 @@
 /**
  * Created by Administrator on 2017/7/18.
  */
-$("#welcom").click(function(){
-    var welcom=$("#welcom");
-    var h=$("#h");
-    var hh=$("#hh");
-    welcom.animate({top:'350px'},1000);
-    h.animate({fontSize:'1.5em',opacity:'0'},500);
-    h.animate({fontSize:'1em',opacity:'0'},500);
-    h.animate({opacity:'1'},700);
-    hh.animate({fontSize:'0.5em',opacity:'0'},500);
-    hh.animate({fontSize:'0.3em',opacity:'0'},100);
-    hh.animate({opacity:'1'},700);
-    welcom.css("z-index",1);
-
-});
-$("#welcom").click(function(){
-    var shade=$("#shade");
-    shade.animate({height:'768px',opacity:'0.5'},1300);
-
-});
-$("#welcom").click(function(){
+window.onload=function(){
     var region=$("#region");
-    region.animate({top:'500',opacity:'1'},1500);
-
-});
+    var welcom=$("#welcom");
+    var shade=$("#shade");
+    welcom.animate({top:'300px',opacity:'0',width:'-=15%',marginLeft:'+=7.5%'},300);
+    welcom.animate({top:'350px',opacity:'1'},500);
+    shade.animate({opacity:'0.3'},1000);
+    region.animate({top:'500',opacity:'1'},100);
+    region.animate({top:'380',opacity:'0.5'},300);
+    region.animate({top:'500',opacity:'1'},150);
+    region.animate({top:'420',opacity:'0.6'},120);
+    region.animate({top:'500',opacity:'1'},110);
+    region.animate({top:'460',opacity:'0.7'},100);
+    region.animate({top:'500',opacity:'1'},100);
+    region.animate({top:'480',opacity:'0.8'},100);
+    region.animate({top:'500',opacity:'1'},100);
+    region.animate({top:'490',opacity:'0.9'},50);
+    region.animate({top:'500',opacity:'1'},50);
+    region.animate({top:'495',opacity:'0.9'},50);
+    region.animate({top:'500',opacity:'1'},50);
+};
