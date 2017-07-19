@@ -6,6 +6,18 @@ body{
 }
 #bod{overflow: hidden;
     background-image: url(/img/before.jpg);}
+#error{
+    overflow: hidden;
+    background-image: url(/img/error.jpg);
+    text-align: center}
+#error h2{
+    color: #ffffff;
+    font-family: 华文隶书;
+    margin-top:200px;}
+#error h3{
+    color: #ffffff;
+    font-family: 华文隶书;
+    margin-top:50px;}
 .welcom{
     margin:50px 33.3% 0 33.3%;
     width: 33.4%;
@@ -151,11 +163,22 @@ body{
 }
 #know{width: 50%;}
 .user-region{
-    margin: 0 auto;
+    position:absolute;
+    float: left;
     width: 66.6%;
     height: 700px;
-
-    /*opacity: 0;*/
+    z-index: 998;
+    margin-left: 16.2%;
+    opacity: 0;
+}
+.shadee{
+    float: left;
+    z-index: 99;
+    width: 70%;
+    height: 770px;
+    background-color: #969696;
+    opacity: 0;
+    margin: -10px 15%;
 }
 .information{
     width: 48%;
@@ -167,6 +190,7 @@ body{
     width: 17%;
     padding: 10px;
     float: left;
+    z-index: 999;
     border: 3px double #ff3366;
     word-wrap: break-word;
     margin: 50px 5%;
@@ -233,6 +257,8 @@ body{
     .user-region h1 {
         padding-top: 20px;
     }
+    .user-region{}
+    .shadee{width: 75%}
     welcom{margin-top: 300px}
 }
 @media (max-width:768px){
@@ -257,6 +283,8 @@ body{
     }
     .user-region h1{padding-top: 50px;
     }
+    .user-region{margin-left: 16.2%}
+    .shadee{width: 75%}
     #infor{margin-right: 0; }
     .login-click input[type="submit"]{width: 100%;}
     .tips{padding: 0;margin: 50px 1%;width: 28%}
@@ -319,7 +347,7 @@ body{
         padding: 3px;
         width: 98%;
     }
-    .user-region {width: 95%;}
+    .user-region {width: 95%;margin-left: 0.7%}
     #hhh {
         margin-bottom: 1.2em;
         font-size: 1.7em;
@@ -331,8 +359,9 @@ body{
     .login-click input[type="submit"] {
         padding: 10px 0;
     }
+    .shadee{display: none}
     body {
-        min-height: 730px;
+        min-height: 750px;
     }
     .tips{padding: 0;width: 28%}
     #samename{margin-left: 0}
@@ -341,7 +370,7 @@ body{
 }
 @media (max-width:375px){
     body {
-        min-height: 630px;
+        min-height: 750px;
     }
     .shade{
         width: 0; }
@@ -352,7 +381,7 @@ body{
 }
 @media (max-width:320px){
     body {
-        min-height: 568px;
+        min-height: 800px;
     }
     .login-region h1{
         padding-top: 0px;
