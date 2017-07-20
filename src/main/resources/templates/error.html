@@ -7,7 +7,28 @@
     <title>Title</title>
 </head>
 <body id="error">
-      <h2>未查询到相关信息</h2>
-      <h3>请检查输入是否有误</h3>
+      <div class="shade" style="opacity: 0.3;background-color: #696969"></div>
+      <div id="nothing" style="float: left;position: absolute;width: 100%;text-align: center;z-index: 999">
+          <h1>未查询到相关信息</h1>
+      </div>
+      <div  id="find" style="float: left;position: absolute;width: 100%;text-align: center;z-index: 999">
+          <h2>请检查输入是否有误</h2>
+      </div>
+
 </body>
 </html>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script>
+    //<![CDATA[
+    window.onload=function() {
+        var nothing = $("#nothing");
+        var find = $("#find");
+        nothing.animate({top: '100px', opacity: '1'}, 1000);
+        nothing.animate({top: '300px', opacity: '1'}, 1000);
+        nothing.animate({top: '100px', opacity: '1'}, 1000);
+        find.animate({top: '300px', opacity: '1'}, 1000);
+        find.animate({top: '100px', opacity: '1'}, 1000);
+        find.animate({top: '300px', opacity: '1'}, 1000);
+    };
+    //]]>
+</script>
