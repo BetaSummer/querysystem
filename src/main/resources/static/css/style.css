@@ -10,14 +10,22 @@ body{
     overflow: hidden;
     background-image: url(/img/error.jpg);
     text-align: center}
-#error h2{
+#error h1{
     color: #ffffff;
     font-family: 华文隶书;
     margin-top:200px;}
-#error h3{
+#error h2{
     color: #ffffff;
     font-family: 华文隶书;
     margin-top:50px;}
+#nothing{float: left;
+    position: absolute;
+    width: 100%;
+    text-align: center;z-index: 999}
+#find{float: left;
+    position: absolute;
+    width: 100%;
+    text-align: center;z-index: 999}
 .welcom{
     margin:50px 33.3% 0 33.3%;
     width: 33.4%;
@@ -107,7 +115,7 @@ body{
     padding: 8px;
 }
 .login-user i{
-    background: url(/img/user.png)no-repeat;
+    /*background: url(/img/user.png)no-repeat;*/
     background-size: 100% 100%;
     opacity: 0.7;
     width: 38px;
@@ -116,7 +124,7 @@ body{
     display: inline-block;
 }
 .login-user i.pass {
-    background: url(/img/lock.png)no-repeat;
+    /*background: url(/img/lock.png)no-repeat;*/
     background-size: 100% 100%;
     opacity: 0.7;
 }
@@ -176,8 +184,15 @@ body{
     z-index: 99;
     width: 70%;
     height: 770px;
-    background-color: #969696;
+    /*background-color: #969696;*/
     opacity: 0;
+    /*background:-webkit-gradient(linear, 0 0, 0 bottom, from(#b0b0b0), to(#000));*/
+    background: -webkit-linear-gradient(#b0b0b0,#000); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#b0b0b0,#000); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#b0b0b0,#000); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#b0b0b0,#000); /* 标准的语法 */
+
+
     margin: -10px 15%;
 }
 .information{
@@ -191,11 +206,11 @@ body{
     padding: 10px;
     float: left;
     z-index: 999;
-    border: 3px double #ff3366;
+    border: 5px double #ff3366;
     word-wrap: break-word;
     margin: 50px 5%;
     color: #ffffff;
-    font-family: 华文楷体;
+    font-family: 方正舒体;
     font-weight: 900;
 }
 .tips p{font-size: 20px;}
@@ -278,6 +293,7 @@ body{
     body {
         min-height: 750px;
     }
+    #hhh{font-size: 2.6em}
     .information{
         width: 100%
     }
@@ -314,6 +330,7 @@ body{
         margin-bottom: 1.5em;
         font-size: 2.0em;
     }
+    #hhh{font-size: 2.2em}
 }
 @media (max-width:450px){
     .login {

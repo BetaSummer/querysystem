@@ -6,13 +6,22 @@ window.onload=function(){
     var welcom=$("#welcom");
     var shade=$("#shade");
     welcom.animate({top:'350px',opacity:'0',width:'-=15%',marginLeft:'+=7.5%'},0);
-    welcom.animate({top:'350px',opacity:'1'},500);
-    shade.animate({opacity:'0.3'},500);
-    region.animate({top:'500',opacity:'1'},500);
+    welcom.animate({top:'350px',opacity:'1'},800);
+    shade.animate({opacity:'0.3'},800);
+    region.animate({top:'300',opacity:'0'},0);
+    region.animate({top:'500',opacity:'1'},700);
     var user=$("#user");
     var shadee=$("#shadee");
     user.animate({top:'100px',opacity:'0.3'},0);
     user.animate({top:'0px',opacity:'1'},800);
-    shadee.animate({opacity:'0.3'},500);
+    shadee.animate({opacity:'0.4'},500);
+    var nothing = $("#nothing");
+    var find = $("#find");
+    nothing.animate({top: '100px', opacity: '1'}, 1000);
+    nothing.animate({top: '200px', opacity: '1'}, 1000);
+    nothing.animate({top: '100px', opacity: '1'}, 1000);
+    find.animate({top: '350px', opacity: '1'}, 1000);
+    find.animate({top: '200px', opacity: '1'}, 1000);
+    find.animate({top: '300px', opacity: '1'}, 1000);
 };
 
