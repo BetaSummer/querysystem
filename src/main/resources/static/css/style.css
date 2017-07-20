@@ -18,6 +18,14 @@ body{
     color: #ffffff;
     font-family: 华文隶书;
     margin-top:50px;}
+#nothing{float: left;
+    position: absolute;
+    width: 100%;
+    text-align: center;z-index: 999}
+#find{float: left;
+    position: absolute;
+    width: 100%;
+    text-align: center;z-index: 999}
 .welcom{
     margin:50px 33.3% 0 33.3%;
     width: 33.4%;
@@ -178,7 +186,13 @@ body{
     height: 770px;
     /*background-color: #969696;*/
     opacity: 0;
-    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#969696), to(#000));
+    /*background:-webkit-gradient(linear, 0 0, 0 bottom, from(#b0b0b0), to(#000));*/
+    background: -webkit-linear-gradient(#b0b0b0,#000); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#b0b0b0,#000); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#b0b0b0,#000); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#b0b0b0,#000); /* 标准的语法 */
+
+
     margin: -10px 15%;
 }
 .information{
