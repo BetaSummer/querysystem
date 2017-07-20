@@ -15,4 +15,3 @@ window.onload=function(){
     user.animate({top:'0px',opacity:'1'},800);
     shadee.animate({opacity:'0.3'},800);
 };
-

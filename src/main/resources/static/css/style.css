@@ -107,7 +107,7 @@ body{
     padding: 8px;
 }
 .login-user i{
-    /*background: url(/img/user.png)no-repeat;*/
+    background: url(/img/user.png)no-repeat;
     background-size: 100% 100%;
     opacity: 0.7;
     width: 38px;
@@ -116,7 +116,7 @@ body{
     display: inline-block;
 }
 .login-user i.pass {
-    /*background: url(/img/lock.png)no-repeat;*/
+    background: url(/img/lock.png)no-repeat;
     background-size: 100% 100%;
     opacity: 0.7;
 }
@@ -163,23 +163,11 @@ body{
 }
 #know{width: 50%;}
 .user-region{
-    position:absolute;
-    float: left;
+    margin: 0 auto;
     width: 66.6%;
     height: 700px;
-    z-index: 998;
-    margin-left: 16.2%;
-    opacity: 0;
-}
-.shadee{
-    float: left;
-    z-index: 99;
-    width: 70%;
-    height: 770px;
-    /*background-color: #969696;*/
-    opacity: 0;
-    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#969696), to(#000));
-    margin: -10px 15%;
+
+    /*opacity: 0;*/
 }
 .information{
     width: 48%;
@@ -191,12 +179,11 @@ body{
     width: 17%;
     padding: 10px;
     float: left;
-    z-index: 999;
-    border: 5px double #ff3366;
+    border: 3px double #ff3366;
     word-wrap: break-word;
     margin: 50px 5%;
     color: #ffffff;
-    font-family: 方正舒体;
+    font-family: 华文楷体;
     font-weight: 900;
 }
 .tips p{font-size: 20px;}
@@ -258,8 +245,6 @@ body{
     .user-region h1 {
         padding-top: 20px;
     }
-    .user-region{}
-    .shadee{width: 75%}
     welcom{margin-top: 300px}
 }
 @media (max-width:768px){
@@ -279,16 +264,11 @@ body{
     body {
         min-height: 750px;
     }
-    #hhh {
-        font-size: 2.3em;
-    }
     .information{
         width: 100%
     }
     .user-region h1{padding-top: 50px;
     }
-    .user-region{margin-left: 16.2%}
-    .shadee{width: 75%}
     #infor{margin-right: 0; }
     .login-click input[type="submit"]{width: 100%;}
     .tips{padding: 0;margin: 50px 1%;width: 28%}
@@ -296,7 +276,6 @@ body{
     #samebirth p,#samearea p,#samename p{font-size: 15px}
     #samebirth a,#samearea a,#samename a{font-size: 25px}
 }
-
 
 @media (max-width:562px){
     .login-region {
@@ -319,7 +298,6 @@ body{
         margin-bottom: 1.5em;
         font-size: 2.0em;
     }
-    .login-use
 }
 @media (max-width:450px){
     .login {
@@ -353,7 +331,7 @@ body{
         padding: 3px;
         width: 98%;
     }
-    .user-region {width: 95%;margin-left: 0.7%}
+    .user-region {width: 95%;}
     #hhh {
         margin-bottom: 1.2em;
         font-size: 1.7em;
@@ -365,9 +343,8 @@ body{
     .login-click input[type="submit"] {
         padding: 10px 0;
     }
-    .shadee{display: none}
     body {
-        min-height: 750px;
+        min-height: 730px;
     }
     .tips{padding: 0;width: 28%}
     #samename{margin-left: 0}
@@ -376,7 +353,7 @@ body{
 }
 @media (max-width:375px){
     body {
-        min-height: 750px;
+        min-height: 630px;
     }
     .shade{
         width: 0; }
@@ -387,7 +364,7 @@ body{
 }
 @media (max-width:320px){
     body {
-        min-height: 800px;
+        min-height: 568px;
     }
     .login-region h1{
         padding-top: 0px;
