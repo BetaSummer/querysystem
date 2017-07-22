@@ -33,6 +33,8 @@ public class Student {
 
     private String Adress;
 
+    private String Hometown;
+
     private String postCode;
 
     private String phoneNum;
@@ -129,6 +131,14 @@ public class Student {
 
     public void setAdress(String adress) {
         Adress = adress;
+    }
+
+    public String getHometown() {
+        return Hometown;
+    }
+
+    public void setHometown(String hometown) {
+        Hometown = hometown;
     }
 
     public String getPostCode() {

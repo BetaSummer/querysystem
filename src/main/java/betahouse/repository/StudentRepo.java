@@ -19,4 +19,7 @@ public interface StudentRepo extends JpaRepository<Student, Integer>{
     @Query("select count (s) from Student s where s.Name = :Name")
     Integer countByName(@Param("Name") String Name);
 
+    @Query("select count (s) from Student s where s.birthDate = :birthDate")
+    Integer countByBirthDate(@Param("birthDate") String birthDate);
+
 }

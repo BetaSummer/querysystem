@@ -37,18 +37,16 @@ public class query extends BaseController {
         if(!ExamNum.equals("")&&student==null){
             student = studentRepo.findByExamNum(ExamNum);
         }
-        String str = student.getAdress();
-        int i;
-        for(i = 0;i < str.length();i++)
-            if(str.charAt(i)=='省')break;
-        str = str.substring(0,i);
+        String str = student.getHometown();
 
         int sameName = studentRepo.countByName(student.getName());
         int sameProvince = countProvinceRepo.findByProvinceName(str).getCount();
+        int sameBirth = studentRepo.countByBirthDate(student.getBirthDate());
 
         model.addAttribute("student", student);
         model.addAttribute("sameNameNum", sameName);
         model.addAttribute("sameProvinceNum", sameProvince);
+        model.addAttribute("sameBirth", sameBirth);
         System.out.println(JSON.toJSONString(model));
         return "result";
     }

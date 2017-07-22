@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
@@ -9,30 +9,30 @@
 <body>
 <div class="shadee" id="shadee"></div>
 <div class="user-region" id="user">
-    <h1 id="hhh">新生信息查询系统</h1><h2>你好：xx,以下是你的信息：</h2>
+    <h1 id="hhh">新生信息查询系统</h1><h2>你好：<span th:text="${student.Name}"/>,以下是你的信息：</h2>
     <div class="login">
         <form>
             <div class="information"  id="infor">
                 <div class="login-user">
-                    <a>专业</a><input type="text" name="" value="填入专业" disabled="disabled" />
+                    <a>专业</a><input type="text" name="" th:value="${student.Major}" disabled="disabled" />
                     <div class="clear"></div>
                 </div>
                 <div class="login-user">
-                    <a>班级号</a><input type="text" name="" value="填入班级号" disabled="disabled"/>
+                    <a>班级号</a><input type="text" name="" th:value="${student.classId}" disabled="disabled"/>
                     <div class="clear"></div>
                 </div>
                 <div class="login-user">
-                    <a>学号</a><input type="text" name="" value="填入学号" disabled="disabled"/>
+                    <a>学号</a><input type="text" name="" th:value="${student.stuId}" disabled="disabled"/>
                     <div class="clear"></div>
                 </div>
             </div>
             <div class="information">
                 <div class="login-user">
-                    <a>寝室号</a><input type="text" name="" value="填入寝室号" disabled="disabled"/>
+                    <a>寝室号</a><input type="text" name="" th:value="${student.dormitoryId}" disabled="disabled"/>
                     <div class="clear"></div>
                 </div>
                 <div class="login-user">
-                    <a>通知书</a><input type="text" name="" value="填入通知书快递单号" disabled="disabled"/>
+                    <a>通知书</a><input type="text" name="" th:value="${student.expressNum}" disabled="disabled"/>
                     <div class="clear"></div>
                 </div>
                 <div class="login-user">
@@ -42,9 +42,9 @@
 
             </div>
             <div class="login-click"><input type="submit" name="" value="我知道了" id="know"/></div>
-            <div class="tips" id="samename"><p>2017级新生中有<a>#</a>人与你同名</p></div>
-            <div class="tips" id="samearea"><p>和你一样来自<a>##</a>省的有<a>#</a>人</p></div>
-            <div class="tips" id="samebirth"><p>还有，与你同年同月生的有<a>#</a>人</p></div>
+            <div class="tips" id="samename"><p>2017级新生中有<span th:text="${sameNameNum}"/>人与你同名</p></div>
+            <div class="tips" id="samearea"><p>和你一样来自<span th:text="${student.Hometown}"/>的有<span th:text="${sameProvinceNum}"/>人</p></div>
+            <div class="tips" id="samebirth"><p>还有，与你同年同月生的有<span th:text="${sameBirth}"/>人</p></div>
         </form>
     </div>
 </div>

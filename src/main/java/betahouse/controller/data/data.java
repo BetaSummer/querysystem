@@ -36,7 +36,7 @@ public class data extends BaseController {
         hssf.open();
         Sheet sheet = hssf.getSheet(0);
         int j,u;
-        String str,sf;
+        String str,sf = "";
         List<Student> studentList = new ArrayList<>();
         List<CountProvince> countProvinceList = new ArrayList<>();
         Map<String, CountProvince> provinceMap = new HashMap<>();
@@ -61,8 +61,8 @@ public class data extends BaseController {
             str = hssf.get(0,i,j++);
 //            省份记录
             for(u = 0;u < str.length();u++)
-                if(str.charAt(u)=='省')break;
-            sf = str.substring(0,u);
+                if(str.charAt(u)=='市')break;
+            sf = str.substring(0,u+1);
             if(!provinceMap.containsKey(sf)){
                 CountProvince c = new CountProvince();
                 c.setProvinceName(sf);
@@ -73,6 +73,7 @@ public class data extends BaseController {
             }
 //            省份记录
             student.setAdress(str);
+            student.setHometown(sf);
             student.setPostCode(hssf.get(0,i,j++));
             student.setPhoneNum(hssf.get(0,i,j++));
             student.setExpressNum(hssf.get(0,i,j++));
