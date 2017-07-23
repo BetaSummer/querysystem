@@ -43,7 +43,7 @@
             </div>
             <div class="login-click"><input type="submit" name="" value="我知道了" id="know"/></div>
             <div class="tips" id="samename"><p>2017级新生中有<span th:text="${sameNameNum}"/>人与你同名</p></div>
-            <div class="tips" id="samearea"><p>和你一样来自<span th:text="${student.Hometown}"/>的有<span th:text="${sameProvinceNum}"/>人</p></div>
+            <div class="tips" id="samearea"><p>和你一样来自<span th:text="${student.Hometown}" id="s-a"/>的有<span th:text="${sameProvinceNum}"/>人</p></div>
             <div class="tips" id="samebirth"><p>还有，与你同年同月生的有<span th:text="${sameBirth}"/>人</p></div>
         </form>
     </div>

@@ -13,19 +13,16 @@ body{
 #error h1{
     color: #ffffff;
     font-family: 华文隶书;
-    margin-top:200px;}
+    margin-top:0px;  }
 #error h2{
     color: #ffffff;
     font-family: 华文隶书;
-    margin-top:50px;}
-#nothing{float: left;
+    margin-top:100px;  }
+#nothing,#find{float: left;
     position: absolute;
     width: 100%;
-    text-align: center;z-index: 999}
-#find{float: left;
-    position: absolute;
-    width: 100%;
-    text-align: center;z-index: 999}
+    text-align: center;z-index: 999;
+    opacity: 0.1;}
 .welcom{
     margin:50px 33.3% 0 33.3%;
     width: 33.4%;
@@ -207,6 +204,7 @@ body{
     float: left;
     z-index: 999;
     border: 5px double #ff3366;
+    box-shadow:0px 0px 2px 2px #ff3366 inset;
     word-wrap: break-word;
     margin: 50px 5%;
     color: #ffffff;
@@ -214,7 +212,8 @@ body{
     font-weight: 900;
 }
 .tips p{font-size: 20px;}
-.tips a{font-size: 30px;}
+.tips span{font-size: 40px;text-shadow: 5px 2px 2px #FF0000}
+#s-a{font-size: 20px;}
 #samename{
     margin-left: 12%;
     transform:rotate(9deg);
@@ -259,7 +258,7 @@ body{
     body {
         min-height: 750px;
     }
-    welcom{margin-top: 300px}
+    .welcom{margin-top: 100px}
     .login-user input[type="text"] {
         width: 47%;
     }
@@ -274,12 +273,10 @@ body{
     }
     .user-region{}
     .shadee{width: 75%}
-    welcom{margin-top: 300px}
+    .welcom{margin-top: 200px}
 }
 @media (max-width:768px){
-    body {
-        min-height: 929px;
-    }
+    body{  min-height: 900px;  }
     .login-region {
         width: 66%;
         margin-left: 17%;
@@ -289,9 +286,6 @@ body{
         margin-left:10.4% }
     .login-user input[type="text"] {
         width: 66%;
-    }
-    body {
-        min-height: 750px;
     }
     #hhh{font-size: 2.6em}
     .information{
@@ -306,6 +300,7 @@ body{
     .tips{padding: 0;margin: 50px 1%;width: 28%}
     #samename{margin-left: 1%}
     #samebirth p,#samearea p,#samename p{font-size: 15px}
+    #s-a{font-size: 15px;}
     #samebirth a,#samearea a,#samename a{font-size: 25px}
 }
 
@@ -318,13 +313,10 @@ body{
         width: 89%;
         margin-left:5.5% }
     body {
-        min-height: 700px;
+        min-height: 900px;
     }
     .login-user input[type="text"] {
         width: 60%;
-    }
-    .welcom{
-        padding-top: 25%;        /*padding-top: 1%;*/
     }
     .login-region h1 {
         margin-bottom: 1.5em;
