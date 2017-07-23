@@ -14,14 +14,10 @@ window.onload=function(){
     var shadee=$("#shadee");
     user.animate({top:'100px',opacity:'0.3'},0);
     user.animate({top:'0px',opacity:'1'},800);
-    shadee.animate({opacity:'0.4'},500);
+    shadee.animate({opacity:'0.3'},500);
     var nothing = $("#nothing");
     var find = $("#find");
-    nothing.animate({top: '100px', opacity: '1'}, 1000);
     nothing.animate({top: '200px', opacity: '1'}, 1000);
-    nothing.animate({top: '100px', opacity: '1'}, 1000);
-    find.animate({top: '350px', opacity: '1'}, 1000);
     find.animate({top: '200px', opacity: '1'}, 1000);
-    find.animate({top: '300px', opacity: '1'}, 1000);
 };
 
