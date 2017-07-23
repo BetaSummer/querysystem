@@ -13,18 +13,15 @@ body{
 #error h1{
     color: #ffffff;
     font-family: 华文隶书;
-    margin-top:200px;}
+    margin-top:0px;}
 #error h2{
     color: #ffffff;
     font-family: 华文隶书;
-    margin-top:50px;}
-#nothing{float: left;
+    margin-top:100px;}
+#nothing,#find{float: left;
     position: absolute;
     width: 100%;
-    text-align: center;z-index: 999}
-#find{float: left;
-    position: absolute;
-    width: 100%;
+    opacity: 0;
     text-align: center;z-index: 999}
 .welcom{
     margin:50px 33.3% 0 33.3%;
@@ -212,9 +209,11 @@ body{
     color: #ffffff;
     font-family: 方正舒体;
     font-weight: 900;
+    box-shadow: 0px 0px 20px  #ff3366 inset;
 }
 .tips p{font-size: 20px;}
-.tips a{font-size: 30px;}
+.tips span{font-size: 40px;text-shadow: 5px 2px 2px #ff3366}
+#s-a{font-size: 20px;}
 #samename{
     margin-left: 12%;
     transform:rotate(9deg);
@@ -290,9 +289,6 @@ body{
     .login-user input[type="text"] {
         width: 66%;
     }
-    body {
-        min-height: 750px;
-    }
     #hhh{font-size: 2.6em}
     .information{
         width: 100%
@@ -318,7 +314,7 @@ body{
         width: 89%;
         margin-left:5.5% }
     body {
-        min-height: 700px;
+        min-height: 900px;
     }
     .login-user input[type="text"] {
         width: 60%;
@@ -378,16 +374,17 @@ body{
     }
     .shadee{display: none}
     body {
-        min-height: 750px;
+        min-height: 760px;
     }
     .tips{padding: 0;width: 28%}
     #samename{margin-left: 0}
+    #s-a{font-size: 15px;}
     #samebirth p,#samearea p,#samename p{font-size: 15px}
     #samebirth a,#samearea a,#samename a{font-size: 25px}
 }
 @media (max-width:375px){
     body {
-        min-height: 750px;
+        min-height: 760px;
     }
     .shade{
         width: 0; }
@@ -398,7 +395,7 @@ body{
 }
 @media (max-width:320px){
     body {
-        min-height: 800px;
+        min-height: 760px;
     }
     .login-region h1{
         padding-top: 0px;
